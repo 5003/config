@@ -14,6 +14,7 @@ export BASH_PROFILE_PATH
 export EDITOR=vi
 alias datetimesuffix='date +%Y-%m-%d_%H%M%S'
 alias ll='ls -aFl'
+alias sudo='sudo '
 if type python2 &> /dev/null
   then
 alias p4='python2 -m SimpleHTTPServer 4000'
