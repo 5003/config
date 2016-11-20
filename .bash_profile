@@ -36,8 +36,9 @@ if type docker &> /dev/null
 dcc() {
   docker run --interactive --tty --rm "$@"
 }
-alias dangling='docker images --quiet --filter dangling=true'
-alias danglingrmi='docker rmi --force $(dangling)'
+dangling() {
+  docker "$@" --quiet --filter dangling=true
+}
 alias psc='docker ps --format "{{ .ID }} / {{ .Names }} // {{ .Image }} /// {{ .Ports }}"'
 alias psci='docker images --format "{{ .Repository }} / {{ .Tag }} // {{ .Size }}" | LANG=C sort'
 ansibledock() {
