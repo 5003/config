@@ -15,6 +15,14 @@ export EDITOR=vi
 alias datetimesuffix='date +%Y-%m-%d_%H%M%S'
 alias ll='ls -aFl'
 alias sudo='sudo '
+xman() {
+cat << EOT
+
+listfiles / rpm --query --list // dpkg --listfiles
+deplist / yum deplist // dpkg --status
+
+EOT
+}
 if type python2 &> /dev/null
   then
 alias p4='python2 -m SimpleHTTPServer 4000'
