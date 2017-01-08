@@ -23,6 +23,10 @@ deplist / yum deplist // dpkg --status
 
 EOT
 }
+if type git &> /dev/null
+  then
+alias gl='git log --walk-reflogs --abbrev-commit --pretty=oneline'
+    fi
 if type python2 &> /dev/null
   then
 alias p4='python2 -m SimpleHTTPServer 4000'
