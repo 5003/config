@@ -38,6 +38,7 @@ alias dig='dig +nocmd +nocomments +nostats'
 if type vagrant &> /dev/null
   then
 alias vag='vagrant'
+alias vags='vagrant snapshot'
     fi
 if type aws &> /dev/null
   then
